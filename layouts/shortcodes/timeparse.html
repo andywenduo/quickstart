@@ -1,0 +1,4 @@
+{{ $duration := .Get 0 }}
+{{ $parsedDuration := time.ParseDuration $duration }}
+{{ $newTime := now.Add $parsedDuration }}
+{{ dateFormat "2006-01-02 15:04:05" $newTime }}
